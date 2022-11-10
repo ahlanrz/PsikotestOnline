@@ -1,6 +1,6 @@
-package com.juaracoding.psikotestonline.drivers.strategies;
+package com.juaracoding.psikotest.step_definitions.drivers.strategies;
 
-import com.juaracoding.psikotestonline.utils.Constants;
+import com.juaracoding.psikotest.step_definitions.utils.Constants;
 
 public class DriverStrategyImplementer {
     public static DriverStrategy chooseStrategy(String strategy) {

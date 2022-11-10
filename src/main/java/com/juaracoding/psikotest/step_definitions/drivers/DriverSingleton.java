@@ -1,8 +1,8 @@
-package com.juaracoding.psikotestonline.drivers;
+package com.juaracoding.psikotest.step_definitions.drivers;
 
-import com.juaracoding.psikotestonline.drivers.strategies.DriverStrategy;
-import com.juaracoding.psikotestonline.drivers.strategies.DriverStrategyImplementer;
-import com.juaracoding.psikotestonline.utils.Constants;
+import com.juaracoding.psikotest.step_definitions.drivers.strategies.DriverStrategy;
+import com.juaracoding.psikotest.step_definitions.drivers.strategies.DriverStrategyImplementer;
+import com.juaracoding.psikotest.step_definitions.utils.Constants;
 import org.openqa.selenium.WebDriver;
 
 import java.util.concurrent.TimeUnit;

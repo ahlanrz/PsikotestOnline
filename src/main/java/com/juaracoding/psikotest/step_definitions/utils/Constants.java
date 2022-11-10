@@ -1,4 +1,4 @@
-package com.juaracoding.psikotestonline.utils;
+package com.juaracoding.psikotest.step_definitions.utils;
 
 public class Constants {
     public static final int TIMEOUT = 10;

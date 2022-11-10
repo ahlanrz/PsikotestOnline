@@ -1,4 +1,4 @@
-package com.juaracoding.psikotestonline;
+package com.juaracoding.psikotest.step_definitions;
 
 public class Main {
     public static void main(String[] args) {
