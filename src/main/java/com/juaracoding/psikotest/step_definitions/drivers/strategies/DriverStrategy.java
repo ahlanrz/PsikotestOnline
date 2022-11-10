@@ -1,4 +1,4 @@
-package com.juaracoding.psikotestonline.drivers.strategies;
+package com.juaracoding.psikotest.step_definitions.drivers.strategies;
 
 import org.openqa.selenium.WebDriver;
 
