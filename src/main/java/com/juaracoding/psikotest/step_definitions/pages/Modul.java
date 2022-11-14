@@ -51,6 +51,4 @@ public class Modul {
 
     @FindBy(xpath = "//*[@id=\"53201_query\"]/span")
     WebElement btnsavemodul;
-
-
 }
