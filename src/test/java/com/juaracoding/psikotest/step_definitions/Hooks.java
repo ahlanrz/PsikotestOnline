@@ -33,11 +33,11 @@ public class Hooks {
         reports.flush();
     }
 
-    @AfterAll
+    /*@AfterAll
     public static void closeBrowser() {
         delay(3);
         DriverSingleton.closeObjectInstance();
-    }
+    }*/
 
     public static void delay(int detik) {
         try {

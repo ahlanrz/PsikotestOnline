@@ -7,6 +7,7 @@ import com.relevantcodes.extentreports.LogStatus;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.cucumber.java.en_scouse.An;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
@@ -73,10 +74,16 @@ public class TestLogin {
         extentTest.log(LogStatus.PASS, "User click button login valid");
     }
 
-    @Then("User valid credentials")
+    @And("User valid credentials")
     public void user_valid_credentials() {
         Assert.assertEquals(loginPage.getTxtWelcome(), "Welcome to web psikotest");
         extentTest.log(LogStatus.PASS, "User valid credentials");
+    }
+
+    @Then("User click button information OK")
+    public void user_click_button_information_ok() {
+        loginPage.clickbtnokinfo();
+        extentTest.log(LogStatus.PASS, "User click button information ok");
     }
 
 

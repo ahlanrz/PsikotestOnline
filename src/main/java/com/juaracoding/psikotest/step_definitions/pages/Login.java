@@ -32,6 +32,9 @@ public class Login {
     @FindBy(xpath = "/html/body/div[10]/div[3]/div/button/span")
     WebElement btnOkeInvalid;
 
+    @FindBy(xpath = "/html/body/div[8]/div[3]/div/button/span")
+    WebElement btnokinfo;
+
 //    @FindBy(xpath = "//div[@class='orangehrm-login-slot-wrapper']//div[1]//div[1]//span[1]")
 //    WebElement txtRequired;
 
@@ -57,6 +60,10 @@ public class Login {
 
     public void clickBtnOkeInvalid() {
         btnOkeInvalid.click();
+    }
+
+    public void clickbtnokinfo() {
+        btnokinfo.click();
     }
 
 }
