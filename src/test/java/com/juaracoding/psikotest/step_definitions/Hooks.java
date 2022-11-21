@@ -13,6 +13,7 @@ import io.cucumber.java.Before;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 
+
 public class Hooks {
     public static WebDriver driver;
     public static ExtentTest extentTest;
