@@ -1,30 +1,38 @@
-Feature: RemoveActivity user
+Feature: user Remove Activity
 
-Scenario: User search
-  When User go to Web Psikotest Online
-  And TCC.PO.020 menginput alamat email tanpa gmail dari data
-  And TCC.PO.027 Mencari dan menampilkan data alamat email tanpa gmail dari data
-  And TCC.PO.021 menginput alamat gmail lengkap dari data
-  And TCC.PO.028 Mencari dan Menampilkan alamat gmail lengkap dari data
-  And TCC.PO.022 menginput 4 angka nomor telepon dari data
-  And TCC.PO.031 Mencari dan menampilkan data dengan 4 no telepon
-  And TCC.PO.023 menginput angka nomor telepon lengkap dan menampilkan data
-  And TCC.PO.032 Mencari dan menampilkan data dengan nomor telepon lengkap
-  And TCC.PO.024 menginput 2 inisial nama user dari nama lengkap dari data nya
-  And TCC.PO.029 Mencari dan menampilkan beberapa data dengan inisial 2 huruf
-  And TCC.PO.025 menginput nama lengkap user dari tampilan  datanya
-  And TCC.PO.030 Mencari dan Menampilkan beberapa data dengan nama yang lengkap
-  And TCC.PO.026 menginput huruf kapital yang di dalam datanya
-  And TCC.PO.033 Mencari dan menampilkan data dengan huruf kapital
+  Scenario: Admin masuk ke Remove Activity
+    When User Admin go to Web Remove Activity
+    And Admin klik menu Remove Activity
+    And Admin klik submenu Remove Activity
+    Then Tampil halaman Remove Activity
 
-  Scenario: User pages
-    And TCC.PO.034 menambahkan tampilan data yang yang ingin dilihat dari 10
-    And TCC.PO.035 menambahkan tampilan data yang yang ingin dilihat dari 25
-    And TCC.PO.036 menambahkan tampilan data yang ingin dilihat dari 50
-    And TCC.PO.037 menambahkan tampilan data yang yang ingin dilihat dari 100
-    And TCC.PO.038 menambahkan tampilan data yang yang ingin dilihat dari 500
+    Scenario: Admin input mencari data
+      When TCC.PO.019 menginput NIK lengkap dari data
+      And TCC.PO.026 Menampilkan dari NIK yang input dari data
+      Then Admin input nomor Nik
 
-    Scenario: User delete
-  And TCC.PO.039 Info pemberitahuan ingin di hapus atau tidak
-  And TCC.PO.040 memilih status iya untuk menghapus
-  Then TCC.PO.041 memilih status tidak untuk kembali
+      Scenario: Admin input mencari data dengan nama lengkap
+      When TCC.PO.020 Menginput Nama calon dari data
+      And TCC.PO.027 Menampilkan nama lengkap yang di input dari data
+      Then Admin input nama lengkap
+
+   Scenario: Admin input email dari data
+     When TCC.PO.021 Menginput alamat gmail dari data
+     And TCC.PO.028 Menampilkan alamat gmail yang di input dari data
+     Then Admin mencari dan menampilkan dari data gmail
+
+Scenario: Admin input nomor telepon dari data
+  When TCC.PO.022 Menginput angka nomor telepon lengkap dari data
+  And  TCC.PO.029 Menampilkan nomor telepon yang di input dari datanya
+  Then Admin menginput nomor telepon dari data
+
+  Scenario: Admin tidak jadi menghapus data
+    When TCC.PO.038 Info pemberitahuan ingin di hapus atau tidak
+    And TCC.PO.040 Memilih status tidak untuk kembali
+    Then Admin klik TIDAK
+
+    Scenario: Admin menghapus data
+      When TCC.PO.039 memilih status iya untuk menghapus
+      And Admin klik YA
+      Then Muncul pop up data berhasil dihapus
+      Then Admin klik OK
