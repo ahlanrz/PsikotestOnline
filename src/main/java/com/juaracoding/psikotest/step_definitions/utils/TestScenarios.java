@@ -1,6 +1,7 @@
 package com.juaracoding.psikotest.step_definitions.utils;
 
 public enum TestScenarios {
+<<<<<<< HEAD
     T1("User valid login"),
     T2("TCC.PO.001 Mencari user calon pelamar yang berhasil  perbulan dari kalender awal"),
     T3("TCC.PO.002 Mencari user calon pelamar yang berhasil  perbulan dari kalender akhir"),
@@ -43,6 +44,14 @@ public enum TestScenarios {
     T40("TCC.PO.039 Info pemberitahuan ingin di hapus atau tidak"),
     T41("TCC.PO.040 memilih status iya untuk menghapus"),
     T42("TCC.PO.041 memilih status tidak untuk kembali");
+=======
+//    T1("User login username password invalid"),
+    T1("User valid login");
+//    T3("Dashboard user function"),
+//    T4("Recruitment user function"),
+//    T5("Recrutiment Searching by Hiring Manager Name");
+//
+>>>>>>> origin/master
     private String testName;
 
     TestScenarios(String value) {
