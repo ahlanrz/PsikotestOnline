@@ -4,13 +4,9 @@ Feature: Modul Admin
     When Admin click tab task
     Then Admin click tab task modul
 
-  Scenario: Admin Save Blank Modul
-    When Admin click button add modul invalid
-    And Admin click button Save
-    Then  Admin click close tab warning
-
   Scenario: Admin Add Modul Pilihan Ganda Leader
-    When Admin insert nama modul leader
+    When Admin click button add modul
+    And Admin insert nama modul leader
     And Admin choose tipe modul pilihan ganda leader
     And Admin insert waktu pengerjaan pilihan ganda leader
     And Admin insert jumlah soal leader
@@ -522,6 +518,86 @@ Feature: Modul Admin
     And Admin edit status modul pilihan a b staff
     And Admin click button UPDATE pilihan a b staff
     Then Admin click button OK pemberitahuan pilihan a b staff
+
+
+  ## SCENARIO TEST NEGATIVE
+
+  Scenario:TCC.PO.002 Admin Save Blank Modul
+    When TCC.PO.002 Admin click button add modul
+    And TCC.PO.002 Admin click button Save
+    Then  TCC.PO.002 Admin click close tab warning
+
+  Scenario:TCC.PO.004 Admin Mengisi Nama Modul dan Save
+    When TCC.PO.004 Admin insert nama modul
+    And TCC.PO.004 Admin click button save
+    Then TCC.PO.004 Admin click close tab warning
+
+  Scenario:TCC.PO.006 Admin Memilih Tipe Modul dan Save
+    When TCC.PO.006 Admin choose tipe modul
+    And TCC.PO.006 Admin click button save
+    Then TCC.PO.006 Admin click close tab warning
+
+  Scenario:TCC.PO.008 Admin Mengisi waktu pengerjaan dan Save
+    When TCC.PO.008 Admin insert waktu pengerjaan
+    And TCC.PO.008 Admin click button save
+    Then TCC.PO.008 Admin click close tab warning
+
+  Scenario:TCC.PO.010 Admin Mengisi jumlah soal dan Save
+    When TCC.PO.010 Admin insert jumlah soal
+    And TCC.PO.010 Admin click button save
+    Then TCC.PO.010 Admin click close tab warning
+
+  Scenario:TCC.PO.012 Admin Memilih Kategori dan Save
+    When TCC.PO.012 Admin choose kategori modul
+    And TCC.PO.012 Admin click button save
+    Then TCC.PO.012 Admin click close tab warning
+
+  Scenario:TCC.PO.014 Admin Mengisi deskripsi dan Save
+    When TCC.PO.014 Admin insert deskripsi soal
+    And TCC.PO.014 Admin click button save
+    Then TCC.PO.014 Admin click close tab warning
+
+  Scenario:TCC.PO.016 Admin Memilih status modul dan Save
+    When TCC.PO.016 Admin clear nama modul
+    And TCC.PO.016 Admin choose status modul
+    And TCC.PO.016 Admin click button save
+    Then TCC.PO.016 Admin click close tab warning
+
+  Scenario:TCC.PO.100 Admin Menambahkan soal tanpa mengisi soal,jawaban dan kunci jawaban pg
+    When TCC.PO.100 Admin click button form template soal pg
+    And TCC.PO.100 Admin click button ADD
+    And TCC.PO.100 Admin click button OK
+    Then TCC.PO.100 Admin click button close form soal
+
+  Scenario:TCC.PO.111 Admin Menambahkan soal tanpa mengisi soal,jawaban dan kunci jawaban esai free text
+    When TCC.PO.111 Admin click button form template soal esai free text
+    And TCC.PO.111 Admin click button ADD
+    And TCC.PO.111 Admin click button OK
+    Then TCC.PO.111 Admin click button close form soal
+
+  Scenario:TCC.PO.122 Admin Menambahkan soal tanpa mengisi soal,jawaban dan kunci jawaban enum ya tidak
+    When TCC.PO.122 Admin click button form template soal enum ya tidak
+    And TCC.PO.122 Admin click button ADD
+    And TCC.PO.122 Admin click button OK
+    Then TCC.PO.122 Admin click button close form soal
+
+  Scenario:TCC.PO.134 Admin Menambahkan soal tanpa mengisi soal,jawaban dan kunci jawaban esai length
+    When TCC.PO.134 Admin click button form template soal esai length
+    And TCC.PO.134 Admin click button ADD
+    And TCC.PO.134 Admin click button OK
+    Then TCC.PO.134 Admin click button close form soal
+
+  Scenario:TCC.PO.146 Admin Menambahkan soal tanpa mengisi soal,jawaban dan kunci jawaban pilihan a b
+    When TCC.PO.146 Admin click button form template soal pilihan a b
+    And TCC.PO.146 Admin click button ADD
+    And TCC.PO.146 Admin click button OK
+    Then TCC.PO.146 Admin click button close form soal
+
+
+
+
+
+
 
 
 

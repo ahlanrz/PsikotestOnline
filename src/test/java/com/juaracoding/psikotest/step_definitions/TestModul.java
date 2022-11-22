@@ -38,30 +38,16 @@ public class TestModul {
         extentTest.log(LogStatus.PASS, "Admin click tab task modul");
     }
 
-    //add blank modul
 
-    @When("Admin click button add modul invalid")
-    public void admin_click_button_add_modul_invalid() {
+    //add modul pilihan ganda leader
+
+    @When("Admin click button add modul")
+    public void admin_click_button_add_modul() {
         modulpage.clickaddmodul();
-        extentTest.log(LogStatus.PASS, "Admin click button add modul invalid");
+        extentTest.log(LogStatus.PASS, "Admin click button add modul");
     }
 
-    @And("Admin click button Save")
-    public void admin_click_button_save() {
-        modulpage.savemodul();
-        extentTest.log(LogStatus.PASS, "Admin click button Save");
-    }
-
-    @Then("Admin click close tab warning")
-    public void admin_click_close_tab_warning() {
-        modulpage.closewaning();
-        extentTest.log(LogStatus.PASS, "Admin click button Save");
-    }
-
-
-    //add modul valid pilihan ganda leader
-
-    @When("Admin insert nama modul leader")
+    @And("Admin insert nama modul leader")
     public void admin_insert_nama_modul_pg_leader() {
         modulpage.namamodul("Test SQA Batch 10 Leader #");
         extentTest.log(LogStatus.PASS, "admin typing nama modul");
@@ -2538,5 +2524,314 @@ public class TestModul {
         modulpage.buttonokupdatemodul();
         extentTest.log(LogStatus.PASS, "Admin click button OK pemberitahuan pilihan a b staff");
     }
+
+    // TEST SCENARIO NEGATIVE //
+
+    //TCC.PO.002 TEST BLANK MODUL SAVE
+    @When("TCC.PO.002 Admin click button add modul")
+    public void admin_click_button_add_modul_invalid() {
+        modulpage.clickaddmodul();
+        extentTest.log(LogStatus.PASS, "Admin click button add modul invalid");
+    }
+
+    @And("TCC.PO.002 Admin click button Save")
+    public void admin_click_button_save() {
+        modulpage.savemodul();
+        extentTest.log(LogStatus.PASS, "Admin click button Save");
+    }
+
+    @Then("TCC.PO.002 Admin click close tab warning")
+    public void admin_click_close_tab_warning() {
+        modulpage.closewaning();
+        extentTest.log(LogStatus.PASS, "Admin click button Save");
+    }
+
+
+    //TCC.PO.004 TEST NEGATIVE ISI NAMA MODUL DAN SAVE
+
+    @When("TCC.PO.004 Admin insert nama modul")
+    public void TCC_PO_004_admin_insert_nama_modul() {
+        modulpage.namamodul("Test SQA Batch 10 Leader #");
+        extentTest.log(LogStatus.PASS, "TCC.PO.004 Admin insert nama modul");
+    }
+
+    @And("TCC.PO.004 Admin click button save")
+    public void TCC_PO_004_admin_click_button_save() {
+        modulpage.savemodul();
+        extentTest.log(LogStatus.PASS, "TCC.PO.004 Admin click button save");
+    }
+
+    @Then("TCC.PO.004 Admin click close tab warning")
+    public void TCC_PO_004_admin_click_close_tab_warning() {
+        modulpage.closewaning();
+        extentTest.log(LogStatus.PASS, "TCC.PO.004 Admin click close tab warning");
+    }
+
+    //TCC.PO.006 TEST NEGATIVE TIPE MODUL DAN SAVE
+
+    @When("TCC.PO.006 Admin choose tipe modul")
+    public void TCC_PO_006_admin_choose_tipe_modul_pg_leader() {
+        modulpage.selecttipemodul("PILIHAN GANDA");
+        extentTest.log(LogStatus.PASS, "TCC.PO.006 Admin choose tipe modul pilihan ganda leader");
+    }
+
+    @And("TCC.PO.006 Admin click button save")
+    public void TCC_PO_006_admin_click_button_save() {
+        modulpage.savemodul();
+        extentTest.log(LogStatus.PASS, "TCC.PO.006 Admin click button save");
+    }
+
+    @Then("TCC.PO.006 Admin click close tab warning")
+    public void TTCC_PO_006_admin_click_close_tab_warning() {
+        modulpage.closewaning();
+        extentTest.log(LogStatus.PASS, "TCC.PO.006 Admin click close tab warning");
+    }
+
+    //TCC.PO.008 TEST NEGATIVE MENGISI WAKTU PENGERJAAN DAN SAVE
+
+    @When("TCC.PO.008 Admin insert waktu pengerjaan")
+    public void TCC_PO_008_admin_insert_waktu_pengerjaan() {
+        modulpage.waktupengerjaan(10);
+        extentTest.log(LogStatus.PASS, "TCC.PO.008 Admin insert waktu pengerjaan");
+    }
+
+    @And("TCC.PO.008 Admin click button save")
+    public void TCC_PO_008_admin_click_button_save() {
+        modulpage.savemodul();
+        extentTest.log(LogStatus.PASS, "TCC.PO.008 Admin click button save");
+    }
+
+    @Then("TCC.PO.008 Admin click close tab warning")
+    public void TCC_PO_008_admin_click_close_tab_warning() {
+        modulpage.closewaning();
+        extentTest.log(LogStatus.PASS, "TCC.PO.008 Admin click close tab warning");
+    }
+
+
+    //TCC.PO.010 TEST NEGATIVE Mengisi Jumlah Soal DAN SAVE
+
+    @And("TCC.PO.010 Admin insert jumlah soal")
+    public void TCC_PO_010_admin_insert_jumlah_soal() {
+        modulpage.jumlahsoal(2);
+        extentTest.log(LogStatus.PASS, "TCC.PO.010 Admin insert jumlah soal");
+    }
+
+    @And("TCC.PO.010 Admin click button save")
+    public void TCC_PO_010_admin_click_button_save() {
+        modulpage.savemodul();
+        extentTest.log(LogStatus.PASS, "TCC.PO.010 Admin click button save");
+    }
+
+    @Then("TCC.PO.010 Admin click close tab warning")
+    public void TCC_PO_010_admin_click_close_tab_warning() {
+        modulpage.closewaning();
+        extentTest.log(LogStatus.PASS, "TCC.PO.010 Admin click close tab warning");
+    }
+
+    //TCC.PO.012 TEST NEGATIVE MEMILIH KATEGORI DAN SAVE
+
+    @When("TCC.PO.012 Admin choose kategori modul")
+    public void TCC_PO_012_admin_choose_kategori_modul() {
+        modulpage.selectkategorimodul("LEADER");
+        extentTest.log(LogStatus.PASS, "Admin choose kategori modul leader");
+    }
+
+    @And("TCC.PO.012 Admin click button save")
+    public void TCC_PO_012_admin_click_button_save() {
+        modulpage.savemodul();
+        extentTest.log(LogStatus.PASS, "TCC.PO.006 Admin click button save");
+    }
+
+    @Then("TCC.PO.012 Admin click close tab warning")
+    public void TCC_PO_012_admin_click_close_tab_warning() {
+        modulpage.closewaning();
+        extentTest.log(LogStatus.PASS, "TCC.PO.006 Admin click close tab warning");
+    }
+
+
+    //TCC.PO.014 TEST NEGATIVE MENGISI DESKRIPSI DAN SAVE
+
+    @When("TCC.PO.014 Admin insert deskripsi soal")
+    public void TCC_PO_014_admin_insert_deskripsi_soal() {
+        modulpage.deskripsisingkat("Test SQA");
+        extentTest.log(LogStatus.PASS, "TCC.PO.014 Admin insert deskripsi soal");
+    }
+
+    @And("TCC.PO.014 Admin click button save")
+    public void TCC_PO_014_admin_click_button_save() {
+        modulpage.savemodul();
+        extentTest.log(LogStatus.PASS, "TCC.PO.014 Admin click button save");
+    }
+
+    @Then("TCC.PO.014 Admin click close tab warning")
+    public void TCC_PO_014_admin_click_close_tab_warning() {
+        modulpage.closewaning();
+        extentTest.log(LogStatus.PASS, "TCC.PO.014 Admin click close tab warning");
+    }
+
+    //TCC.PO.016 TEST NEGATIVE MEMILIH STATUS MODUL DAN SAVE
+
+    @When("TCC.PO.016 Admin clear nama modul")
+    public void TCC_PO_016_admin_clear_nama_modul() {
+        modulpage.namamodulclear();
+        extentTest.log(LogStatus.PASS, "TCC.PO.016 Admin clear nama modul");
+    }
+
+    @And("TCC.PO.016 Admin choose status modul")
+    public void TCC_PO_016_admin_choose_status_modul() {
+        modulpage.selectstatusmodul("ACTIVE");
+        extentTest.log(LogStatus.PASS, "Admin choose status modul");
+    }
+
+
+    @And("TCC.PO.016 Admin click button save")
+    public void TCC_PO_016_admin_click_button_save() {
+        modulpage.savemodul();
+        extentTest.log(LogStatus.PASS, "TCC.PO.016 Admin click button save");
+    }
+
+    @And("TCC.PO.016 Admin click close tab warning")
+    public void TCC_PO_016_admin_click_close_tab_warning() {
+        modulpage.closewaning();
+        extentTest.log(LogStatus.PASS, "TCC.PO.016 Admin click close tab warning");
+    }
+
+    @Then("TCC.PO.016 Admin click close modul")
+    public void TCC_PO_016_admin_click_close_modul() {
+        modulpage.buttonclosemodul();
+        extentTest.log(LogStatus.PASS, "TCC.PO.016 Admin click close modul");
+    }
+
+    //TCC.PO.100 TEST NEGATIVE Admin Menambahkan soal tanpa mengisi soal,jawaban dan kunci jawaban pg
+
+    @When("TCC.PO.100 Admin click button form template soal pg")
+    public void TCC_PO_100_admin_click_button_form_template_soal_pg() {
+        modulpage.buttonaddtemplatesoalpgleader();
+        extentTest.log(LogStatus.PASS, "TCC.PO.100 Admin click button form template soal soal pg");
+    }
+
+    @And("TCC.PO.100 Admin click button ADD")
+    public void TCC_PO_100_admin_click_button_add() {
+        modulpage.buttonaddsoal();
+        extentTest.log(LogStatus.PASS, "TCC.PO.100 Admin click button ADD");
+    }
+
+    @And("TCC.PO.100 Admin click button OK")
+    public void TCC_PO_100_admin_click_ok() {
+        modulpage.buttonokaddsoal();
+        extentTest.log(LogStatus.PASS, "TCC.PO.100 Admin click button OK");
+    }
+
+    @Then("TCC.PO.100 Admin click button close form soal")
+    public void TCC_PO_100_admin_click_button_close_form_soal() {
+        modulpage.buttoncloseformsoal();
+        extentTest.log(LogStatus.PASS, "TCC.PO.100 Admin click button close form soal");
+    }
+
+    //TCC.PO.111 TEST NEGATIVE Admin Menambahkan soal tanpa mengisi soal,jawaban dan kunci jawaban esai free text
+
+    @When("TCC.PO.111 Admin click button form template soal esai free text")
+    public void TCC_PO_111_admin_click_button_form_template_soal_esai_free_Text() {
+        modulpage.buttonaddtemplatesoalesaifreetextleader();
+        extentTest.log(LogStatus.PASS, "TCC.PO.111 Admin click button form template soal esai free text");
+    }
+
+    @And("TCC.PO.111 Admin click button ADD")
+    public void TCC_PO_111_admin_click_button_add() {
+        modulpage.buttonaddsoal();
+        extentTest.log(LogStatus.PASS, "TCC.PO.111 Admin click button ADD");
+    }
+
+    @And("TCC.PO.111 Admin click button OK")
+    public void TCC_PO_111_admin_click_ok() {
+        modulpage.buttonokaddsoal();
+        extentTest.log(LogStatus.PASS, "TCC.PO.111 Admin click button OK");
+    }
+
+    @Then("TCC.PO.111 Admin click button close form soal")
+    public void TCC_PO_111_admin_click_button_close_form_soal() {
+        modulpage.buttoncloseformsoal();
+        extentTest.log(LogStatus.PASS, "TCC.PO.100 Admin click button close form soal");
+    }
+
+    //TCC.PO.122 TEST NEGATIVE Admin Menambahkan soal tanpa mengisi soal,jawaban dan kunci jawaban enum (ya/tidak)
+
+    @When("TCC.PO.122 Admin click button form template soal enum ya tidak")
+    public void TCC_PO_122_admin_click_button_form_template_soal_enum() {
+        modulpage.buttonaddtemplatesoalenumyatidakleader();
+        extentTest.log(LogStatus.PASS, "TCC.PO.122 Admin click button form template soal enum ya tidak");
+    }
+
+    @And("TCC.PO.122 Admin click button ADD")
+    public void TCC_PO_122_admin_click_button_add() {
+        modulpage.buttonaddsoal();
+        extentTest.log(LogStatus.PASS, "TCC.PO.122 Admin click button ADD");
+    }
+
+    @And("TCC.PO.122 Admin click button OK")
+    public void TCC_PO_122_admin_click_ok() {
+        modulpage.buttonokaddsoal();
+        extentTest.log(LogStatus.PASS, "TCC.PO.122 Admin click button OK");
+    }
+
+    @Then("TCC.PO.122 Admin click button close form soal")
+    public void TCC_PO_122_admin_click_button_close_form_soal() {
+        modulpage.buttoncloseformsoal();
+        extentTest.log(LogStatus.PASS, "TCC.PO.122 Admin click button close form soal");
+    }
+
+    //TCC.PO.134 TEST NEGATIVE Admin Menambahkan soal tanpa mengisi soal,jawaban dan kunci jawaban esai length
+
+    @When("TCC.PO.134 Admin click button form template soal esai length")
+    public void TCC_PO_134_admin_click_button_form_template_soal_esai_length() {
+        modulpage.buttonaddtemplatesoalesailengthleader();
+        extentTest.log(LogStatus.PASS, "TCC.PO.134 Admin click button form template soal esai length");
+    }
+
+    @And("TCC.PO.134 Admin click button ADD")
+    public void TCC_PO_134_admin_click_button_add() {
+        modulpage.buttonaddsoal();
+        extentTest.log(LogStatus.PASS, "TCC.PO.134 Admin click button ADD");
+    }
+
+    @And("TCC.PO.134 Admin click button OK")
+    public void TCC_PO_134_admin_click_ok() {
+        modulpage.buttonokaddsoal();
+        extentTest.log(LogStatus.PASS, "TCC.PO.134 Admin click button OK");
+    }
+
+    @Then("TCC.PO.134 Admin click button close form soal")
+    public void TCC_PO_134_admin_click_button_close_form_soal() {
+        modulpage.buttoncloseformsoal();
+        extentTest.log(LogStatus.PASS, "TCC.PO.134 Admin click button close form soal");
+    }
+
+    //TCC.PO.146 TEST NEGATIVE Admin Menambahkan soal tanpa mengisi soal,jawaban dan kunci jawaban pilihan a/b
+
+    @When("TCC.PO.146 Admin click button form template soal pilihan a b")
+    public void TCC_PO_146_admin_click_button_form_template_soal_pilihan_a_b() {
+        modulpage.buttonaddtemplatesoalpilihanableader();
+        extentTest.log(LogStatus.PASS, "TCC.PO.146 Admin click button form template soal pilihan a b");
+    }
+
+    @And("TCC.PO.146 Admin click button ADD")
+    public void TCC_PO_146_admin_click_button_add() {
+        modulpage.buttonaddsoal();
+        extentTest.log(LogStatus.PASS, "TCC.PO.146 Admin click button ADD");
+    }
+
+    @And("TCC.PO.146 Admin click button OK")
+    public void TCC_PO_146_admin_click_ok() {
+        modulpage.buttonokaddsoal();
+        extentTest.log(LogStatus.PASS, "TCC.PO.146 Admin click button OK");
+    }
+
+    @Then("TCC.PO.146 Admin click button close form soal")
+    public void TCC_PO_146_admin_click_button_close_form_soal() {
+        modulpage.buttoncloseformsoal();
+        extentTest.log(LogStatus.PASS, "TCC.PO.146 Admin click button close form soal");
+    }
+
+
 
 }

@@ -74,6 +74,10 @@ public class Modul {
     @FindBy(xpath = "//span[normalize-space()='Search']")
     WebElement btnsearchmodul;
 
+    @FindBy(xpath = "/html/body/div[9]/div[1]/div/button/span[1]")
+    WebElement btnclosemodul;
+
+
     //add soal
 
     @FindBy(id = "--_text")
@@ -223,13 +227,16 @@ public class Modul {
     }
 
 
-    public void savemodul() {
+    public void savemodul() { delay(detik);
+
         btnsavemodul.click();
     }
 
     public void closewaning() {
         btnclosewarning.click();
     }
+
+    public void buttonclosemodul() { btnclosemodul.click();}
 
     public void selectkategorimodul(String selectkategorimodul) {
         Select kategori = new Select(this.kategori);
@@ -242,6 +249,15 @@ public class Modul {
         this.deskripsisingkat.sendKeys(deskripsisingkat);
     }
 
+    public void namamodulclear() { delay(detik);
+
+        this.namamodul.clear();
+
+    }
+
+
+
+
     public void selectstatusmodul(String selectstatusmodul) {
         Select statusmodul = new Select(this.statusmodul);
 
@@ -249,10 +265,12 @@ public class Modul {
     }
 
     public void saveinformationok() { delay(detik);
+
+
         btnsavemodulok.click();
     }
 
-    public void informationok() {
+    public void informationok() { delay(detik);
         btninformationclose.click();
     }
 
@@ -344,10 +362,13 @@ public class Modul {
         btnaddsoal.click();
     }
 
-    public void buttonokaddsoal() {  delay(detik);
-        btnokaddsoal.click();
+    public void buttonokaddsoal() {
         JavascriptExecutor js2 = (JavascriptExecutor) driver;
-        js2.executeScript("window.scrollBy(0,1000)");
+        js2.executeScript("window.scrollBy(0,500)");
+        delay(detik);
+        btnokaddsoal.click();
+        JavascriptExecutor js3 = (JavascriptExecutor) driver;
+        js3.executeScript("window.scrollBy(0,500)");
     }
 
     public void buttoneditsoal() {  delay(detik);
